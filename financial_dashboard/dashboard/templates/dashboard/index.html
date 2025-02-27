@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Financial Dashboard</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Viwe Teko (Pty) Ltd Financial Dashboard</h1>
+        <div class="filters">
+            <label for="granularity">Granularity:</label>
+            <select id="granularity">
+                <option value="D">Daily</option>
+                <option value="W">Weekly</option>
+                <option value="M">Monthly</option>
+                <option value="Q">Quarterly</option>
+                <option value="A">Annually</option>
+            </select>
+            <label for="start-date">Start Date:</label>
+            <input type="date" id="start-date">
+            <label for="end-date">End Date:</label>
+            <input type="date" id="end-date">
+            <label for="asset-classes">Asset Classes:</label>
+            <select id="asset-classes" multiple>
+                <!-- Populated dynamically -->
+            </select>
+            <button onclick="updateDashboard()">Update</button>
+        </div>
+        <div class="charts">
+            <canvas id="lineChart"></canvas>
+            <canvas id="pieChart"></canvas>
+        </div>
+        <div class="table">
+            <table id="dataTable">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <!-- Columns populated dynamically -->
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Rows populated dynamically -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/static/js/scripts.js"></script>
+</body>
+</html>
