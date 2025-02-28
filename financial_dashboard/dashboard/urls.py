@@ -1,6 +1,6 @@
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from .views import AssetClassViewSet, FinancialDataViewSet
+from .views import AssetClassViewSet, FinancialDataViewSet, index
 
 router = DefaultRouter()
 router.register(r'asset-classes', AssetClassViewSet)
